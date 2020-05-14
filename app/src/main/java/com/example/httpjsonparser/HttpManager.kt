@@ -11,7 +11,7 @@ class HttpManager(context: Context) {
 
     private val queue: RequestQueue = Volley.newRequestQueue(context)
 
-    fun getUserInfo(onUserReady: (UserInfo) -> Unit, onError: ((Int) -> Unit)? = null) {
+    fun getUserInfo(onUserReady: (UserInfo) -> Unit, onError: (() -> Unit)? = null) {
         val userURL = "https://raw.githubusercontent.com/echeeUW/codesnippets/master/user_info.json"
 
         val request = StringRequest(
@@ -24,9 +24,9 @@ class HttpManager(context: Context) {
                 onUserReady(userInfo)
 
             },
-            { error ->
+            {
                 // Failure
-                onError?.invoke(error.networkResponse.statusCode)
+                onError?.invoke()
             }
         )
 

@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
             { userInfo ->
                 toastMessage(userInfo.username)
             },
-            { statusCode ->
-                toastMessage("Error! Status Code $statusCode")
+            {
+                toastMessage("Error! Something went wrong!")
             }
         )
     }
