@@ -6,4 +6,8 @@ class LikesManager {
     fun incrementLikes() {
         likesCount++
     }
+
+    fun getLikes(): Int {
+        return likesCount
+    }
 }

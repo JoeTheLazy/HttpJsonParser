@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HttpJsonParser</string>
+    <string name="fetch_button_default">Fetch Profile</string>
+    <string name="default_username">username</string>
+    <string name="default_platform">platform</string>
+    <string name="default_names">first_last_name</string>
+    <string name="default_nose_text">has_nose</string>
+    <string name="like_btn_text">Give a Like</string>
+    <string name="default_likes">Likes: 0</string>
 </resources>
